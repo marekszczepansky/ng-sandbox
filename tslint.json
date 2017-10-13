@@ -20,7 +20,7 @@
     "import-spacing": true,
     "indent": [
       true,
-      "spaces"
+      "tabs"
     ],
     "interface-over-type-literal": true,
     "label-position": true,
@@ -32,12 +32,7 @@
     "member-ordering": [
       true,
       {
-        "order": [
-          "static-field",
-          "instance-field",
-          "static-method",
-          "instance-method"
-        ]
+        "order": "fields-first"
       }
     ],
     "no-arg": true,
@@ -117,13 +112,13 @@
     "directive-selector": [
       true,
       "attribute",
-      "app",
+      "ms",
       "camelCase"
     ],
     "component-selector": [
       true,
       "element",
-      "app",
+      "ms",
       "kebab-case"
     ],
     "use-input-property-decorator": true,

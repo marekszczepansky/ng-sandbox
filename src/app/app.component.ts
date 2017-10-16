@@ -7,6 +7,7 @@ import {Component} from '@angular/core';
           Welcome to {{title}}!!
       </h1>
 			<a routerLink="sandbox1">comp1</a>
+			<a routerLink="templVar">templVar</a>
       <router-outlet></router-outlet>
 	`,
 	styleUrls: ['./app.component.scss']

@@ -4,13 +4,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import {AppRoutingModule} from './app-routing.module';
 import {AppComponent} from './app.component';
-import {Sandbox1Component} from './sandbox1/sandbox1.component';
+import {Sandbox1Component, TestDirective} from './sandbox1/sandbox1.component';
 import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		Sandbox1Component,
+		TestDirective,
 	],
 	imports: [
 		BrowserModule,

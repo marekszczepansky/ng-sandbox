@@ -15,12 +15,13 @@
     "forin": true,
     "import-blacklist": [
       true,
-      "rxjs"
+      "rxjs",
+      "rxjs/Rx"
     ],
     "import-spacing": true,
     "indent": [
       true,
-      "tabs"
+      "spaces"
     ],
     "interface-over-type-literal": true,
     "label-position": true,
@@ -32,7 +33,12 @@
     "member-ordering": [
       true,
       {
-        "order": "fields-first"
+        "order": [
+          "static-field",
+          "instance-field",
+          "static-method",
+          "instance-method"
+        ]
       }
     ],
     "no-arg": true,

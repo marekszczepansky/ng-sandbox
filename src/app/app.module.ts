@@ -7,6 +7,7 @@ import {AppComponent} from './app.component';
 import {Sandbox1Component, TestDirective} from './sandbox1/sandbox1.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {TemplateVariableComponent} from './template-variable/template-variable.component';
+import {CommunicationModule} from './communication/communication.module';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import {TemplateVariableComponent} from './template-variable/template-variable.c
     ReactiveFormsModule,
     FormsModule,
     AppRoutingModule,
+    CommunicationModule,
     NgbModule.forRoot(),
   ],
   providers: [],

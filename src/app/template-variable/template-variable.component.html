@@ -1,5 +1,13 @@
 <p>before {{daj(ff)}}</p>
 <ul>
-	<li *ngFor="let name of tablica" #ff>{{name}} - inside {{daj(ff)}}</li>
+  <li *ngFor="let name of tablica" #ff>{{name}} - inside {{daj(ff)}}</li>
 </ul>
+
+<div class="gist-it-gist">
+  <div class="gist-file">
+    <div class="gist-data">
+      <pre class="prettyprint">{{kod2 | async}}</pre>
+    </div>
+  </div>
+</div>
 <p>after {{daj(ff)}}</p>

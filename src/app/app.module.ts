@@ -8,6 +8,7 @@ import {Sandbox1Component, TestDirective} from './sandbox1/sandbox1.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {TemplateVariableComponent} from './template-variable/template-variable.component';
 import {CommunicationModule} from './communication/communication.module';
+import {HttpModule} from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import {CommunicationModule} from './communication/communication.module';
     BrowserModule,
     ReactiveFormsModule,
     FormsModule,
+    HttpModule,
     AppRoutingModule,
     CommunicationModule,
     NgbModule.forRoot(),

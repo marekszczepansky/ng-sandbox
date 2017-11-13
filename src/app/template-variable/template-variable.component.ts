@@ -18,5 +18,4 @@ export class TemplateVariableComponent implements OnInit {
     console.log(ff);
     return '1';
   }
-
 }

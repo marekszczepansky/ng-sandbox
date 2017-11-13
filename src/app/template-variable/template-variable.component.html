@@ -1,13 +1,15 @@
-<p>before {{daj(ff)}}</p>
-<ul>
-  <li *ngFor="let name of tablica" #ff>{{name}} - inside {{daj(ff)}}</li>
-</ul>
-
-<div class="gist-it-gist">
-  <div class="gist-file">
-    <div class="gist-data">
-      <pre class="prettyprint">{{kod2 | async}}</pre>
-    </div>
+<div class="row">
+  <div class="col-md-6">
+    <p>before {{daj(ff)}}</p>
+    <ul>
+      <li *ngFor="let name of tablica" #ff>{{name}} - inside {{daj(ff)}}</li>
+    </ul>
+    <p>after {{daj(ff)}}</p>
+  </div>
+  <div class="col-md-6">
+    <ms-github-source
+      filename="ng-sandbox/master/src/app/template-variable/template-variable.component.ts"></ms-github-source>
+    <ms-github-source
+      filename="ng-sandbox/master/src/app/template-variable/template-variable.component.html"></ms-github-source>
   </div>
 </div>
-<p>after {{daj(ff)}}</p>

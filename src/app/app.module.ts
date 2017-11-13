@@ -9,6 +9,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {TemplateVariableComponent} from './template-variable/template-variable.component';
 import {CommunicationModule} from './communication/communication.module';
 import {HttpModule} from '@angular/http';
+import { GithubSourceComponent } from './github-source/github-source.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import {HttpModule} from '@angular/http';
     Sandbox1Component,
     TestDirective,
     TemplateVariableComponent,
+    GithubSourceComponent,
   ],
   imports: [
     BrowserModule,

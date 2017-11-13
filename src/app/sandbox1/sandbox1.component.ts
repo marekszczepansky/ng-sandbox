@@ -35,7 +35,8 @@ import {FormArray, FormBuilder, FormControl, FormGroup, NG_VALUE_ACCESSOR} from 
           <ngb-panel title="sandbox1.component.ts">
             <ng-template ngbPanelContent>
               <ms-github-source
-                filename="ng-sandbox/master/src/app/sandbox1/sandbox1.component.ts"></ms-github-source>
+                filename="ng-sandbox/master/src/app/sandbox1/sandbox1.component.ts">
+              </ms-github-source>
             </ng-template>
           </ngb-panel>
         </ngb-accordion>

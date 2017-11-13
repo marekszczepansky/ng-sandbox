@@ -14,7 +14,6 @@ export class TemplateVariableComponent implements OnInit {
   ngOnInit() {
   }
 
-
   daj(ff) {
     console.log(ff);
     return '1';

@@ -7,9 +7,19 @@
     <p>after {{daj(ff)}}</p>
   </div>
   <div class="col-md-6">
-    <ms-github-source
-      filename="ng-sandbox/master/src/app/template-variable/template-variable.component.ts"></ms-github-source>
-    <ms-github-source
-      filename="ng-sandbox/master/src/app/template-variable/template-variable.component.html"></ms-github-source>
+    <ngb-accordion [closeOthers]="true">
+      <ngb-panel title="template-variable.component.ts">
+        <ng-template ngbPanelContent>
+          <ms-github-source
+            filename="ng-sandbox/master/src/app/template-variable/template-variable.component.ts"></ms-github-source>
+        </ng-template>
+      </ngb-panel>
+      <ngb-panel title="template-variable.component.html">
+        <ng-template ngbPanelContent>
+          <ms-github-source
+            filename="ng-sandbox/master/src/app/template-variable/template-variable.component.html"></ms-github-source>
+        </ng-template>
+      </ngb-panel>
+    </ngb-accordion>
   </div>
 </div>

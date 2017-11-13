@@ -4,29 +4,37 @@ import {FormArray, FormBuilder, FormControl, FormGroup, NG_VALUE_ACCESSOR} from 
 @Component({
   selector: 'ms-sandbox1',
   template: `
-    <form [formGroup]="checkboxGroupForm">
-      <div class="btn-group" data-toggle="buttons">
-        <label class="btn-primary" ngbButtonLabel>
-          <input type="checkbox" formControlName="left" ngbButton [valueUnChecked]="null" valueChecked="value1"> Left
-          (pre-checked)
-        </label>
-        <label class="btn-primary" ngbButtonLabel>
-          <input type="checkbox" formControlName="middle" ngbButton> Middle
-        </label>
-        <label class="btn-primary" ngbButtonLabel>
-          <input type="checkbox" formControlName="right" ngbButton> Right
-        </label>
+    <div class="row">
+      <div class="col-md-6">
+        <form [formGroup]="checkboxGroupForm">
+          <div class="btn-group" data-toggle="buttons">
+            <label class="btn-primary" ngbButtonLabel>
+              <input type="checkbox" formControlName="left" ngbButton [valueUnChecked]="null" valueChecked="value1">
+              Left (pre-checked)
+            </label>
+            <label class="btn-primary" ngbButtonLabel>
+              <input type="checkbox" formControlName="middle" ngbButton> Middle
+            </label>
+            <label class="btn-primary" ngbButtonLabel>
+              <input type="checkbox" formControlName="right" ngbButton> Right
+            </label>
+          </div>
+          <div class="btn-group" data-toggle="buttons" formArrayName="arr">
+            <label class="btn-primary" ngbButtonLabel *ngFor="let typp of arr.controls; let i = index">
+              <input type="checkbox" msTest
+                     [formControlName]="i" ngbButton [valueUnChecked]="null" valueChecked="{{typesArray[i]}}">
+              {{typesArray[i]}}
+            </label>
+          </div>
+        </form>
+        <hr>
+        <pre>{{checkboxGroupForm.value | json}}</pre>
       </div>
-      <div class="btn-group" data-toggle="buttons" formArrayName="arr">
-        <label class="btn-primary" ngbButtonLabel *ngFor="let typp of arr.controls; let i = index">
-          <input type="checkbox" msTest
-                 [formControlName]="i" ngbButton [valueUnChecked]="null" valueChecked="{{typesArray[i]}}">
-          {{typesArray[i]}}
-        </label>
+      <div class="col-md-6">
+        <ms-github-source
+          filename="ng-sandbox/master/src/app/sandbox1/sandbox1.component.ts"></ms-github-source>
       </div>
-    </form>
-    <hr>
-    <pre>{{checkboxGroupForm.value | json}}</pre>
+    </div>
   `,
   styles: []
 })

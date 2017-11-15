@@ -10,6 +10,7 @@ import {TemplateVariableComponent} from './template-variable/template-variable.c
 import {CommunicationModule} from './communication/communication.module';
 import {HttpModule} from '@angular/http';
 import { GithubSourceComponent } from './github-source/github-source.component';
+import {Checkbox2testComponent, CheckBoxArrayDirective, CheckBoxArrayItemDirective} from './checkbox2test/checkbox2test.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,9 @@ import { GithubSourceComponent } from './github-source/github-source.component';
     TestDirective,
     TemplateVariableComponent,
     GithubSourceComponent,
+    Checkbox2testComponent,
+    CheckBoxArrayDirective,
+    CheckBoxArrayItemDirective
   ],
   imports: [
     BrowserModule,

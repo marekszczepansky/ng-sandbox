@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="col-md-6">
+    <form [formGroup]="checkboxGroupForm">
+      <div formControlName="arr" msCheckBoxArray>
+        <label *ngFor="let obj of objArray">
+          <input type="checkbox" msCheckBoxArrayItem [value]="obj">
+          {{obj.name}}
+        </label>
+      </div>
+    </form>
+    <hr>
+    <pre>{{checkboxGroupForm.value | json}}</pre>
+  </div>
+  <div class="col-md-6">
+    <ngb-accordion [closeOthers]="true">
+      <ngb-panel title="sandbox1.component.ts">
+        <ng-template ngbPanelContent>
+          <ms-github-source
+                  filename="ng-sandbox/master/src/app/checkbox2test/checkbox2test.component.ts">
+          </ms-github-source>
+        </ng-template>
+      </ngb-panel>
+    </ngb-accordion>
+  </div>
+</div>

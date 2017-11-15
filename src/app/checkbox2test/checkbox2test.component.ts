@@ -1,4 +1,4 @@
-import {Component, Directive, forwardRef, Host, Input, OnInit, ViewEncapsulation} from '@angular/core';
+import {Component, Directive, forwardRef, Input, OnInit, ViewEncapsulation} from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
 
 @Component({
@@ -21,8 +21,12 @@ export class Checkbox2testComponent implements OnInit {
 
   ngOnInit() {
     this.checkboxGroupForm = this.formBuilder.group({
-      arr: [[]]
+      arr: [[this.objArray[1]]]
     });
+  }
+
+  setRight() {
+    this.checkboxGroupForm.get('arr').setValue([this.objArray[2]]);
   }
 }
 
@@ -40,14 +44,32 @@ const MULTI_CHECKBOX_VALUE_ACCESSOR = {
 })
 export class CheckBoxArrayDirective implements ControlValueAccessor {
   private itemsArray: any = [];
+  private checkboxsArray: CheckBoxArrayItemDirective[] = [];
+  // private compareWith = (a, b) => a === b;
+  private compareWith = (a, b) => {
+    console.log('a,b ', a, b, a === b);
+    return a === b;
+  };
+
+  @Input()
+  set setCompareWith(compareFunction) {
+    if (typeof compareFunction === 'function') {
+      this.compareWith = compareFunction;
+    }
+  }
 
   onChange = (_: any) => {
-  }
-  onTouched = () => {
-  }
+  };
 
-  writeValue(value: any[]): void {
-    this.itemsArray = Array.isArray(value) ? value : [value];
+  onTouched = () => {
+  };
+
+  writeValue(inputValue: any[]): void {
+    this.itemsArray = Array.isArray(inputValue) ? inputValue : [];
+    this.checkboxsArray.forEach(checkbox => {
+      checkbox.checked = this.itemsArray.some(value => this.compareWith(value, checkbox.value));
+      console.log('checked', checkbox);
+    });
   }
 
   registerOnChange(fn: (value: any) => any): void {
@@ -74,6 +96,13 @@ export class CheckBoxArrayDirective implements ControlValueAccessor {
     }
   }
 
+  includes(item: any): boolean {
+    return this.itemsArray.some((val) => this.compareWith(val, item));
+  }
+
+  registerCheckBox(value: CheckBoxArrayItemDirective) {
+    this.checkboxsArray.push(value);
+  }
 }
 
 @Directive({
@@ -88,10 +117,16 @@ export class CheckBoxArrayDirective implements ControlValueAccessor {
 export class CheckBoxArrayItemDirective {
   checked: boolean;
 
-  @Input()
   value: any = true;
 
+  @Input('value')
+  set setValue(val: any) {
+    this.value = val;
+    this.checked = this.checkBoxArrayDirective.includes(val);
+  }
+
   constructor(private checkBoxArrayDirective: CheckBoxArrayDirective) {
+    this.checkBoxArrayDirective.registerCheckBox(this);
   }
 
   onTouched() {
@@ -105,5 +140,4 @@ export class CheckBoxArrayItemDirective {
       this.checkBoxArrayDirective.exclude(this.value);
     }
   }
-
 }

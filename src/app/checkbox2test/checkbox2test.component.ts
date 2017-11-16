@@ -68,7 +68,6 @@ export class CheckBoxArrayDirective implements ControlValueAccessor {
     this.itemsArray = Array.isArray(inputValue) ? inputValue : [];
     this.checkboxsArray.forEach(checkbox => {
       checkbox.checked = this.itemsArray.some(value => this.compareWith(value, checkbox.value));
-      console.log('checked', checkbox);
     });
   }
 
@@ -107,6 +106,7 @@ export class CheckBoxArrayDirective implements ControlValueAccessor {
 
 @Directive({
   selector: 'input[type=checkbox][msCheckBoxArrayItem]',
+  exportAs: 'msT',
   host: {
     'autocomplete': 'off',
     '[checked]': 'checked',
@@ -134,7 +134,7 @@ export class CheckBoxArrayItemDirective {
   }
 
   onInputChange($event) {
-    if ($event.target.checked) {
+    if (this.checked = $event.target.checked) {
       this.checkBoxArrayDirective.include(this.value);
     } else {
       this.checkBoxArrayDirective.exclude(this.value);

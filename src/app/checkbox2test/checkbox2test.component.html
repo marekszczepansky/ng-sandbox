@@ -3,8 +3,8 @@
     <form [formGroup]="checkboxGroupForm">
       <div formControlName="arr" msCheckBoxArray>
         <label *ngFor="let obj of objArray">
-          <input type="checkbox" msCheckBoxArrayItem [value]="obj">
-          {{obj.name}}
+          <input type="checkbox" msCheckBoxArrayItem [value]="obj" #mm="msT">
+          {{obj.name}}.{{mm.checked}}
         </label>
       </div>
     </form>

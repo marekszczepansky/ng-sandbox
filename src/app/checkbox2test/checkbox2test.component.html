@@ -4,7 +4,7 @@
       <div formControlName="arr" msCheckBoxArray>
         <label *ngFor="let obj of objArray">
           <input type="checkbox" msCheckBoxArrayItem [value]="obj" #mm="msT">
-          {{obj.name}}.{{mm.checked}}
+          {{obj.name}}
         </label>
       </div>
     </form>
@@ -23,9 +23,9 @@
       </ngb-panel>
       <ngb-panel title="checkbox2test.component.html">
         <ng-template ngbPanelContent>
-          <ms-github-source
-                  filename="ng-sandbox/master/src/app/checkbox2test/checkbox2test.component.html">
-          </ms-github-source>
+          <ms-local-source-assets
+                  filename="app/checkbox2test/checkbox2test.component.html">
+          </ms-local-source-assets>
         </ng-template>
       </ngb-panel>
     </ngb-accordion>

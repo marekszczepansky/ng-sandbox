@@ -11,6 +11,7 @@ import {CommunicationModule} from './communication/communication.module';
 import {HttpModule} from '@angular/http';
 import { GithubSourceComponent } from './github-source/github-source.component';
 import {Checkbox2testComponent, CheckBoxArrayDirective, CheckBoxArrayItemDirective} from './checkbox2test/checkbox2test.component';
+import { LocalSourceAssetsComponent } from './local-source-assets/local-source-assets.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {Checkbox2testComponent, CheckBoxArrayDirective, CheckBoxArrayItemDirecti
     GithubSourceComponent,
     Checkbox2testComponent,
     CheckBoxArrayDirective,
-    CheckBoxArrayItemDirective
+    CheckBoxArrayItemDirective,
+    LocalSourceAssetsComponent
   ],
   imports: [
     BrowserModule,

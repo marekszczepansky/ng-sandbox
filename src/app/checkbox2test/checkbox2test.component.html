@@ -2,13 +2,15 @@
   <div class="col-md-6">
     <form [formGroup]="checkboxGroupForm">
       <div formControlName="arr" msCheckBoxArray>
-        <label *ngFor="let obj of objArray">
-          <input type="checkbox" msCheckBoxArrayItem [value]="obj" #mm="msT">
-          {{obj.name}}
-        </label>
+        <div class="form-check" *ngFor="let obj of objArray">
+          <label class="form-check-label">
+            <input class="form-check-input" type="checkbox" msCheckBoxArrayItem [value]="obj">
+            {{obj.name}}
+          </label>
+        </div>
+        <button type="button" class="btn btn-secondary" (click)="setRight()">set right</button>
       </div>
     </form>
-    <button type="button" (click)="setRight()">set right</button>
     <hr>
     <pre>{{checkboxGroupForm.value | json}}</pre>
   </div>
@@ -16,15 +18,15 @@
     <ngb-accordion [closeOthers]="true">
       <ngb-panel title="checkbox2test.component.ts">
         <ng-template ngbPanelContent>
-          <ms-github-source
-                  filename="ng-sandbox/master/src/app/checkbox2test/checkbox2test.component.ts">
-          </ms-github-source>
+          <ms-local-source-assets
+            filename="app/checkbox2test/checkbox2test.component.ts">
+          </ms-local-source-assets>
         </ng-template>
       </ngb-panel>
       <ngb-panel title="checkbox2test.component.html">
         <ng-template ngbPanelContent>
           <ms-local-source-assets
-                  filename="app/checkbox2test/checkbox2test.component.html">
+            filename="app/checkbox2test/checkbox2test.component.html">
           </ms-local-source-assets>
         </ng-template>
       </ngb-panel>

@@ -9,9 +9,12 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {TemplateVariableComponent} from './template-variable/template-variable.component';
 import {CommunicationModule} from './communication/communication.module';
 import {HttpModule} from '@angular/http';
-import { GithubSourceComponent } from './github-source/github-source.component';
-import {Checkbox2testComponent, CheckBoxArrayDirective, CheckBoxArrayItemDirective} from './checkbox2test/checkbox2test.component';
-import { LocalSourceAssetsComponent } from './local-source-assets/local-source-assets.component';
+import {
+  Checkbox2testComponent,
+  CheckBoxArrayDirective,
+  CheckBoxArrayItemDirective
+} from './checkbox2test/checkbox2test.component';
+import {SharedModule} from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -19,11 +22,9 @@ import { LocalSourceAssetsComponent } from './local-source-assets/local-source-a
     Sandbox1Component,
     TestDirective,
     TemplateVariableComponent,
-    GithubSourceComponent,
     Checkbox2testComponent,
     CheckBoxArrayDirective,
     CheckBoxArrayItemDirective,
-    LocalSourceAssetsComponent
   ],
   imports: [
     BrowserModule,
@@ -31,6 +32,7 @@ import { LocalSourceAssetsComponent } from './local-source-assets/local-source-a
     FormsModule,
     HttpModule,
     AppRoutingModule,
+    SharedModule,
     CommunicationModule,
     NgbModule.forRoot(),
   ],

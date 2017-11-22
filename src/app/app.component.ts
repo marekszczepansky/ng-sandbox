@@ -3,13 +3,18 @@ import {Component} from '@angular/core';
 @Component({
   selector: 'ms-root',
   template: `
-    <h1>
-      Welcome to {{title}}!!!!!!!!!!!
-    </h1>
-    <a routerLink="sandbox1">comp1</a>
-    <a routerLink="templVar">templVar</a>
-    <a routerLink="checkbox2">checkbox2</a>
-    <router-outlet></router-outlet>
+    <div class="row">
+      <div class="col-1 bg-light">
+        <nav class="nav flex-column">
+          <a class="nav-link active" routerLink="sandbox1">comp1</a>
+          <a class="nav-link" routerLink="templVar">templVar</a>
+          <a class="nav-link" routerLink="checkbox2">Checkbox array</a>
+        </nav>
+      </div>
+      <div class="col-11">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
   `,
   styleUrls: ['./app.component.scss']
 })

@@ -1,25 +1,25 @@
 <div class="row">
   <div class="col-md-6">
-    <p>before {{daj(ff)}}</p>
+    <p>before {{ff?.tagName}}</p>
     <ul>
-      <li *ngFor="let name of tablica" #ff>{{name}} - inside {{daj(ff)}}</li>
+      <li *ngFor="let name of tablica" #ff>name:"{{name}}" <br/>variable tagName:{{ff.tagName}}</li>
     </ul>
-    <p>after {{daj(ff)}}</p>
+    <p>after {{ff?.tagName}}</p>
   </div>
   <div class="col-md-6">
     <ngb-accordion [closeOthers]="true">
       <ngb-panel title="template-variable.component.ts">
         <ng-template ngbPanelContent>
-          <ms-github-source
-            filename="ng-sandbox/master/src/app/template-variable/template-variable.component.ts">
-          </ms-github-source>
+          <ms-local-source-assets
+            filename="app/template-variable/template-variable.component.ts">
+          </ms-local-source-assets>
         </ng-template>
       </ngb-panel>
       <ngb-panel title="template-variable.component.html">
         <ng-template ngbPanelContent>
-          <ms-github-source
-            filename="ng-sandbox/master/src/app/template-variable/template-variable.component.html">
-          </ms-github-source>
+          <ms-local-source-assets
+            filename="app/template-variable/template-variable.component.html">
+          </ms-local-source-assets>
         </ng-template>
       </ngb-panel>
     </ngb-accordion>

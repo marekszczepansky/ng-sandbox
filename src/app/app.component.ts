@@ -9,6 +9,7 @@ import {Component} from '@angular/core';
           <a class="nav-link active" routerLink="sandbox1">comp1</a>
           <a class="nav-link" routerLink="templVar">templVar</a>
           <a class="nav-link" routerLink="checkbox2">Checkbox array</a>
+          <a class="nav-link" routerLink="table1">Table1</a>
         </nav>
       </div>
       <div class="col-11">

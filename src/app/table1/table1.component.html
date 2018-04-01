@@ -1,0 +1,22 @@
+<h1>Table 1</h1>
+<div class="table-top">
+  <div class="table-container">
+    <table>
+      <thead>
+      <tr #header>
+        <th>this is Id</th>
+        <th>Name</th>
+        <th>Com</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let tableRow of table1">
+        <td>{{tableRow.id}}</td>
+        <td>{{tableRow.name}}</td>
+        <td>{{tableRow.comment}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

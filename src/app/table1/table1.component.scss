@@ -1,0 +1,14 @@
+.table-top {
+  position: relative;
+}
+.table-container {
+  height: 50vh;
+  border: 1px solid black;
+  overflow: auto;
+  table thead tr {
+    position: absolute;
+    top: 0;
+    background-color: lightgrey;
+  }
+}
+

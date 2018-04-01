@@ -15,6 +15,7 @@ import {
   CheckBoxArrayItemDirective
 } from './checkbox2test/checkbox2test.component';
 import {SharedModule} from './shared/shared.module';
+import {Table1Component} from './table1/table1.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import {SharedModule} from './shared/shared.module';
     Checkbox2testComponent,
     CheckBoxArrayDirective,
     CheckBoxArrayItemDirective,
+    Table1Component,
   ],
   imports: [
     BrowserModule,

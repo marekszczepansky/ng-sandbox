@@ -16,6 +16,7 @@ import {
 } from './checkbox2test/checkbox2test.component';
 import {SharedModule} from './shared/shared.module';
 import {Table1Component} from './table1/table1.component';
+import {QwModule} from './aqw/qw.module';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import {Table1Component} from './table1/table1.component';
     SharedModule,
     CommunicationModule,
     NgbModule.forRoot(),
+    QwModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
